@@ -1,0 +1,161 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  padding: $spacing-lg $page-padding calc(#{$spacing-xl} + env(safe-area-inset-bottom));
+}
+
+.tipCard {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  padding: $spacing-md $spacing-lg;
+  margin-bottom: $spacing-lg;
+  background: $color-accent-bg;
+  border-radius: $radius-md;
+}
+
+.tipIcon {
+  font-size: $font-size-lg;
+}
+
+.tipText {
+  flex: 1;
+  font-size: $font-size-sm;
+  color: $color-accent;
+}
+
+.formGroup {
+  margin-bottom: $spacing-lg;
+}
+
+.label {
+  display: block;
+  margin-bottom: $spacing-sm;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  font-weight: $font-weight-medium;
+
+  &.required::before {
+    content: '* ';
+    color: $color-error;
+  }
+}
+
+.input {
+  width: 100%;
+  height: $button-height-md;
+  padding: 0 $spacing-lg;
+  box-sizing: border-box;
+  background: $color-bg-card;
+  border: 2rpx solid $color-border;
+  border-radius: $radius-md;
+  font-size: $font-size-md;
+  color: $color-text-primary;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 160rpx;
+  padding: $spacing-md $spacing-lg;
+  box-sizing: border-box;
+  background: $color-bg-card;
+  border: 2rpx solid $color-border;
+  border-radius: $radius-md;
+  font-size: $font-size-md;
+  color: $color-text-primary;
+}
+
+.langGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+}
+
+.langChip {
+  display: flex;
+  align-items: center;
+  gap: 6rpx;
+  padding: $spacing-xs $spacing-md;
+  background: $color-bg-card;
+  border: 2rpx solid $color-border;
+  border-radius: $radius-button;
+
+  &.active {
+    background: linear-gradient(135deg, $color-primary-light 0%, $color-primary 100%);
+    border-color: $color-primary;
+  }
+}
+
+.langFlag {
+  font-size: $font-size-md;
+}
+
+.langText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+
+  .active & {
+    color: $color-text-white;
+  }
+}
+
+.sizeRow {
+  display: flex;
+  gap: $spacing-md;
+}
+
+.sizeOption {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $spacing-lg 0;
+  background: $color-bg-card;
+  border: 2rpx solid $color-border;
+  border-radius: $radius-md;
+
+  &.active {
+    border-color: $color-primary;
+    background: $color-primary-bg;
+  }
+}
+
+.sizeNum {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+}
+
+.sizeLabel {
+  margin-top: 4rpx;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.submitBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: $button-height-lg;
+  margin-top: $spacing-xl;
+  background: linear-gradient(135deg, $color-primary-light 0%, $color-primary 100%);
+  border-radius: $radius-button;
+  box-shadow: 0 4rpx 16rpx rgba(255, 107, 74, 0.3);
+
+  &:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+
+  &.disabled {
+    opacity: 0.5;
+  }
+}
+
+.submitText {
+  font-size: $font-size-lg;
+  color: $color-text-white;
+  font-weight: $font-weight-semibold;
+}

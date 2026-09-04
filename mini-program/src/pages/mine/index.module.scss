@@ -1,0 +1,296 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  padding-bottom: calc(#{$spacing-xl} + env(safe-area-inset-bottom));
+  background: linear-gradient(180deg, #fff5f2 0%, $color-bg-page 400rpx);
+}
+
+.profileCard {
+  position: relative;
+  margin: $spacing-lg $page-padding 0;
+  padding: $spacing-lg;
+  background: $color-bg-card;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-card;
+  overflow: hidden;
+}
+
+.profileBg {
+  position: absolute;
+  right: -60rpx;
+  top: -60rpx;
+  width: 240rpx;
+  height: 240rpx;
+  border-radius: $radius-round;
+  background: linear-gradient(135deg, rgba(255, 107, 74, 0.08) 0%, rgba(255, 142, 118, 0.04) 100%);
+}
+
+.profileTop {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.avatarWrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: $radius-round;
+  border: 4rpx solid $color-bg-card;
+  box-shadow: $shadow-card;
+  background: $color-bg-hover;
+}
+
+.roleBadge {
+  position: absolute;
+  bottom: -4rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2rpx 16rpx;
+  background: linear-gradient(135deg, $color-primary-light 0%, $color-primary 100%);
+  border-radius: $radius-button;
+  white-space: nowrap;
+}
+
+.roleText {
+  font-size: $font-size-xs;
+  color: $color-text-white;
+  font-weight: $font-weight-medium;
+}
+
+.profileInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.profileName {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+}
+
+.profileMeta {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  margin-top: 4rpx;
+}
+
+.schoolTag {
+  padding: 2rpx 12rpx;
+  background: $color-accent-bg;
+  border-radius: $radius-xs;
+}
+
+.schoolText {
+  font-size: $font-size-xs;
+  color: $color-accent;
+}
+
+.studentId {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.bio {
+  position: relative;
+  display: block;
+  margin-top: $spacing-md;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  @include text-ellipsis-multi(2);
+}
+
+.creditRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: $spacing-md;
+  padding-top: $spacing-md;
+  border-top: 1rpx solid $color-divider;
+}
+
+.creditLeft {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+}
+
+.creditIcon {
+  font-size: 36rpx;
+}
+
+.creditLabel {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.creditValue {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-credit;
+}
+
+.ratingSection {
+  margin: $spacing-lg $page-padding 0;
+  padding: $spacing-lg;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+}
+
+.sectionTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.ratingList {
+  margin-top: $spacing-md;
+}
+
+.ratingItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-sm 0;
+
+  &:not(:last-child) {
+    border-bottom: 1rpx solid $color-divider;
+  }
+}
+
+.ratingLeft {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+}
+
+.ratingIcon {
+  font-size: $font-size-lg;
+}
+
+.ratingName {
+  font-size: $font-size-md;
+  color: $color-text-primary;
+}
+
+.ratingHint {
+  display: block;
+  margin-top: 2rpx;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.statsRow {
+  display: flex;
+  gap: $spacing-md;
+  margin: $spacing-lg $page-padding 0;
+}
+
+.statCard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $spacing-lg 0;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+}
+
+.statValue {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+}
+
+.statLabel {
+  margin-top: 4rpx;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.menu {
+  margin: $spacing-lg $page-padding 0;
+  padding: 0 $spacing-lg;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  padding: $spacing-lg 0;
+
+  &:not(:last-child) {
+    border-bottom: 1rpx solid $color-divider;
+  }
+}
+
+.menuIcon {
+  flex-shrink: 0;
+  width: 48rpx;
+  font-size: 32rpx;
+  text-align: center;
+}
+
+.menuLabel {
+  flex: 1;
+  font-size: $font-size-md;
+  color: $color-text-primary;
+}
+
+.menuArrow {
+  flex-shrink: 0;
+  font-size: $font-size-md;
+  color: $color-text-disabled;
+}
+
+.loading {
+  padding: $spacing-xl;
+  text-align: center;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.registerTip {
+  margin: $spacing-lg $page-padding 0;
+  padding: $spacing-lg;
+  background: linear-gradient(135deg, $color-primary-light 0%, $color-primary 100%);
+  border-radius: $radius-lg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registerTipText {
+  font-size: $font-size-md;
+  color: $color-text-white;
+  font-weight: $font-weight-medium;
+}
+
+.registerTipBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: $button-height-md;
+  margin-top: $spacing-md;
+  background: $color-bg-card;
+  border-radius: $radius-button;
+}
+
+.registerTipBtnText {
+  font-size: $font-size-md;
+  color: $color-primary;
+  font-weight: $font-weight-semibold;
+}

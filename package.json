@@ -1,0 +1,26 @@
+{
+  "name": "wuyu-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "胡说 · 高校国际口语语伴与组局平台 —— 由微信小程序完整迁移的响应式 Web 应用",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "next": "^15.5.7",
+    "postgres": "^3.4.9",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "^15.5.7",
+    "typescript": "^5"
+  }
+}

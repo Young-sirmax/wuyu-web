@@ -1,0 +1,77 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  padding-bottom: calc(#{$spacing-xl} + env(safe-area-inset-bottom));
+}
+
+.filterBar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  padding: $spacing-md $page-padding;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12rpx);
+}
+
+.filterTab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64rpx;
+  background: $color-bg-hover;
+  border-radius: $radius-button;
+  transition: all $transition-base;
+
+  &.active {
+    background: linear-gradient(135deg, $color-primary-light 0%, $color-primary 100%);
+  }
+}
+
+.filterText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  white-space: nowrap;
+
+  .active & {
+    color: $color-text-white;
+    font-weight: $font-weight-medium;
+  }
+}
+
+.createBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 64rpx;
+  height: 64rpx;
+  background: linear-gradient(135deg, $color-primary-light 0%, $color-primary 100%);
+  border-radius: $radius-round;
+  box-shadow: 0 4rpx 12rpx rgba(255, 107, 74, 0.3);
+}
+
+.createIcon {
+  font-size: $font-size-xl;
+  color: $color-text-white;
+  line-height: 1;
+}
+
+.list {
+  padding: $spacing-md $page-padding 0;
+}
+
+.partyItem {
+  margin-bottom: $spacing-md;
+}
+
+.loading {
+  padding: $spacing-xl;
+  text-align: center;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}

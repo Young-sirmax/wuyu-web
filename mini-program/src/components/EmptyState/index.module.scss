@@ -1,0 +1,25 @@
+@use '@/styles/variables.scss' as *;
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-xl * 2 $spacing-lg;
+}
+
+.icon {
+  font-size: 80rpx;
+  margin-bottom: $spacing-md;
+}
+
+.text {
+  font-size: $font-size-md;
+  color: $color-text-tertiary;
+}
+
+.hint {
+  margin-top: $spacing-xs;
+  font-size: $font-size-sm;
+  color: $color-text-disabled;
+}

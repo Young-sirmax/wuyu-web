@@ -1,0 +1,171 @@
+@use '@/styles/variables.scss' as *;
+
+.card {
+  width: 100%;
+  padding: $spacing-lg;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  transition: all $transition-base;
+
+  &:active {
+    transform: scale(0.98);
+    opacity: 0.95;
+  }
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: $spacing-sm;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  gap: $spacing-sm;
+}
+
+.langTag {
+  flex-shrink: 0;
+  padding: 4rpx 12rpx;
+  background: $color-accent-bg;
+  color: $color-accent;
+  font-size: $font-size-xs;
+  border-radius: $radius-xs;
+  white-space: nowrap;
+}
+
+.title {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  @include text-ellipsis;
+}
+
+.statusTag {
+  flex-shrink: 0;
+  padding: 4rpx 12rpx;
+  border-radius: $radius-xs;
+
+  &.recruiting { background: rgba(0, 180, 42, 0.1); }
+  &.full { background: $color-tag-bg; }
+  &.ongoing { background: $color-primary-bg; }
+  &.ended { background: $color-tag-bg; }
+  &.cancelled { background: rgba(245, 63, 63, 0.1); }
+}
+
+.statusText {
+  font-size: $font-size-xs;
+  white-space: nowrap;
+
+  .recruiting & { color: $color-success; }
+  .full & { color: $color-text-tertiary; }
+  .ongoing & { color: $color-primary; }
+  .ended & { color: $color-text-tertiary; }
+  .cancelled & { color: $color-error; }
+}
+
+.topic {
+  display: block;
+  margin-top: $spacing-sm;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  @include text-ellipsis-multi(1);
+}
+
+.meta {
+  margin-top: $spacing-md;
+}
+
+.members {
+  display: flex;
+  align-items: center;
+  gap: -$spacing-sm;
+}
+
+.memberAvatar {
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: $radius-round;
+  border: 4rpx solid $color-bg-card;
+  background: $color-bg-hover;
+  margin-right: -16rpx;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.memberEmpty {
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: $radius-round;
+  border: 2rpx dashed $color-border;
+  background: $color-bg-hover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -16rpx;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.plus {
+  font-size: $font-size-md;
+  color: $color-text-tertiary;
+}
+
+.memberCount {
+  margin-left: $spacing-md;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.footer {
+  display: flex;
+  gap: $spacing-lg;
+  margin-top: $spacing-md;
+  padding-top: $spacing-md;
+  border-top: 1rpx solid $color-divider;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4rpx;
+  min-width: 0;
+  flex: 1;
+}
+
+.infoLabel {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.infoValue {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  @include text-ellipsis;
+}
+
+.joinBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $button-height-sm;
+  margin-top: $spacing-md;
+  background: linear-gradient(135deg, $color-primary-light 0%, $color-primary 100%);
+  border-radius: $radius-button;
+}
+
+.joinText {
+  font-size: $font-size-md;
+  color: $color-text-white;
+  font-weight: $font-weight-medium;
+}

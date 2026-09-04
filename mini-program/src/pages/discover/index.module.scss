@@ -1,0 +1,271 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  padding-bottom: $spacing-xl;
+  background: linear-gradient(180deg, #fff5f2 0%, $color-bg-page 320rpx);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-md $page-padding 0;
+}
+
+.greet {
+  display: flex;
+  flex-direction: column;
+}
+
+.greetTitle {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+}
+
+.greetSub {
+  margin-top: 4rpx;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.avatarBtn {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  line-height: 1;
+
+  &::after {
+    border: none;
+  }
+}
+
+.avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: $radius-round;
+  border: 3rpx solid $color-bg-card;
+  box-shadow: $shadow-card;
+}
+
+.matchCard {
+  position: relative;
+  margin: $spacing-lg $page-padding 0;
+  padding: $spacing-lg;
+  background: linear-gradient(135deg, $color-primary-light 0%, $color-primary 100%);
+  border-radius: $radius-xl;
+  overflow: hidden;
+  box-shadow: 0 8rpx 24rpx rgba(255, 107, 74, 0.25);
+}
+
+.matchBg {
+  position: absolute;
+  right: -40rpx;
+  top: -40rpx;
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: $radius-round;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.matchBg2 {
+  position: absolute;
+  right: 60rpx;
+  bottom: -60rpx;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: $radius-round;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.matchContent {
+  position: relative;
+  z-index: 1;
+}
+
+.matchTitle {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-text-white;
+}
+
+.matchDesc {
+  display: block;
+  margin-top: $spacing-xs;
+  font-size: $font-size-sm;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.matchBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: $button-height-md;
+  margin-top: $spacing-lg;
+  background: $color-bg-card;
+  border-radius: $radius-button;
+  transition: all $transition-base;
+
+  &:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+}
+
+.matchBtnText {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-primary;
+}
+
+.section {
+  margin-top: $spacing-xl;
+}
+
+.banner {
+  margin: $spacing-lg $page-padding 0;
+  padding: $spacing-lg;
+  background: $color-bg-card;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-card;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  transition: all $transition-base;
+
+  &:active {
+    transform: scale(0.98);
+    opacity: 0.95;
+  }
+}
+
+.bannerIcon {
+  flex-shrink: 0;
+  width: 96rpx;
+  height: 96rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, $color-accent-light 0%, $color-accent 100%);
+  border-radius: $radius-lg;
+  font-size: 48rpx;
+}
+
+.bannerInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.bannerTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  @include text-ellipsis;
+}
+
+.bannerDesc {
+  display: block;
+  margin-top: 4rpx;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  @include text-ellipsis;
+}
+
+.bannerArrow {
+  flex-shrink: 0;
+  font-size: $font-size-lg;
+  color: $color-text-tertiary;
+}
+
+.partnersScroll {
+  white-space: nowrap;
+  padding: 0 $page-padding;
+}
+
+.partnerItem {
+  display: inline-block;
+  width: 540rpx;
+  margin-right: $spacing-md;
+  vertical-align: top;
+  white-space: normal;
+
+  &:last-child {
+    margin-right: $page-padding;
+  }
+}
+
+.partyList {
+  padding: 0 $page-padding;
+}
+
+.partyItem {
+  margin-bottom: $spacing-md;
+}
+
+.vlogScroll {
+  white-space: nowrap;
+  padding: 0 $page-padding;
+}
+
+.vlogItem {
+  display: inline-block;
+  width: 320rpx;
+  margin-right: $spacing-md;
+  vertical-align: top;
+  white-space: normal;
+
+  &:last-child {
+    margin-right: $page-padding;
+  }
+}
+
+.vlogCover {
+  position: relative;
+  width: 320rpx;
+  height: 200rpx;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  background: $color-bg-hover;
+}
+
+.vlogImg {
+  width: 100%;
+  height: 100%;
+}
+
+.vlogDuration {
+  position: absolute;
+  right: $spacing-xs;
+  bottom: $spacing-xs;
+  padding: 2rpx 10rpx;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: $radius-xs;
+  font-size: $font-size-xs;
+  color: $color-text-white;
+}
+
+.vlogTitle {
+  display: block;
+  margin-top: $spacing-sm;
+  font-size: $font-size-sm;
+  color: $color-text-primary;
+  font-weight: $font-weight-medium;
+  @include text-ellipsis-multi(2);
+}
+
+.vlogAuthor {
+  display: block;
+  margin-top: 4rpx;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.loading {
+  padding: $spacing-xl;
+  text-align: center;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}

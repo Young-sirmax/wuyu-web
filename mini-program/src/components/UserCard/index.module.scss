@@ -1,0 +1,141 @@
+@use '@/styles/variables.scss' as *;
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding: $spacing-lg;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  transition: all $transition-base;
+
+  &:active {
+    transform: scale(0.98);
+    opacity: 0.95;
+  }
+}
+
+.compact {
+  padding: $spacing-md;
+}
+
+.avatarWrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 96rpx;
+  height: 96rpx;
+  margin-right: $spacing-md;
+}
+
+.avatar {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: $radius-round;
+  background: $color-bg-hover;
+}
+
+.onlineDot {
+  position: absolute;
+  right: 4rpx;
+  bottom: 4rpx;
+  width: 20rpx;
+  height: 20rpx;
+  background: $color-online;
+  border: 4rpx solid $color-bg-card;
+  border-radius: $radius-round;
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+}
+
+.name {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  @include text-ellipsis;
+}
+
+.roleTag {
+  flex-shrink: 0;
+  padding: 4rpx 12rpx;
+  background: $color-accent-bg;
+  border-radius: $radius-xs;
+
+  &.international {
+    background: $color-primary-bg;
+  }
+}
+
+.roleText {
+  font-size: $font-size-xs;
+  color: $color-accent;
+  white-space: nowrap;
+
+  .international & {
+    color: $color-primary;
+  }
+}
+
+.bio {
+  display: block;
+  margin-top: $spacing-xs;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  @include text-ellipsis-multi(2);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  margin-top: $spacing-sm;
+}
+
+.ratingPill {
+  display: flex;
+  align-items: center;
+  gap: 4rpx;
+}
+
+.star {
+  font-size: $font-size-sm;
+  color: $color-credit;
+}
+
+.ratingValue {
+  font-size: $font-size-sm;
+  color: $color-credit;
+  font-weight: $font-weight-semibold;
+}
+
+.practice {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.actionBtn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $button-height-sm;
+  padding: 0 $spacing-lg;
+  margin-left: $spacing-sm;
+  background: linear-gradient(135deg, $color-primary-light 0%, $color-primary 100%);
+  border-radius: $radius-button;
+}
+
+.actionText {
+  font-size: $font-size-sm;
+  color: $color-text-white;
+  white-space: nowrap;
+}

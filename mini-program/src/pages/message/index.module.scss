@@ -1,0 +1,127 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  padding-bottom: $spacing-xl;
+}
+
+.unreadBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-sm $page-padding;
+  background: $color-primary-bg;
+}
+
+.unreadText {
+  font-size: $font-size-sm;
+  color: $color-primary;
+}
+
+.markReadBtn {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  line-height: 1;
+
+  &::after {
+    border: none;
+  }
+}
+
+.markRead {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.list {
+  padding: $spacing-md $page-padding 0;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-md;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  transition: all $transition-base;
+
+  &:active {
+    opacity: 0.9;
+  }
+
+  &.unread {
+    border-left: 6rpx solid $color-primary;
+  }
+}
+
+.iconWrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: $spacing-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius-lg;
+  font-size: 40rpx;
+
+  &.appointment { background: $color-primary-bg; }
+  &.party { background: $color-accent-bg; }
+  &.evaluation { background: $color-credit-bg; }
+  &.system { background: $color-bg-hover; }
+}
+
+.dot {
+  position: absolute;
+  right: -4rpx;
+  top: -4rpx;
+  width: 16rpx;
+  height: 16rpx;
+  background: $color-error;
+  border: 3rpx solid $color-bg-card;
+  border-radius: $radius-round;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-sm;
+}
+
+.title {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  @include text-ellipsis;
+}
+
+.time {
+  flex-shrink: 0;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.desc {
+  display: block;
+  margin-top: $spacing-xs;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  @include text-ellipsis-multi(2);
+}
+
+.loading {
+  padding: $spacing-xl;
+  text-align: center;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}

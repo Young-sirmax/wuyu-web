@@ -1,0 +1,172 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  padding: $spacing-lg $page-padding calc(#{$spacing-xl} + env(safe-area-inset-bottom));
+}
+
+.targetCard {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-lg;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+}
+
+.avatar {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: $radius-round;
+  background: $color-bg-hover;
+}
+
+.targetInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.targetName {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.targetHint {
+  display: block;
+  margin-top: 4rpx;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.overallCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $spacing-xl $spacing-lg;
+  margin-bottom: $spacing-lg;
+  background: linear-gradient(135deg, #fff5f2 0%, $color-bg-card 100%);
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+}
+
+.overallScore {
+  font-size: 88rpx;
+  font-weight: $font-weight-bold;
+  color: $color-credit;
+  line-height: 1;
+}
+
+.overallLabel {
+  margin-top: $spacing-xs;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.dimSection {
+  padding: $spacing-lg;
+  margin-bottom: $spacing-lg;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+}
+
+.sectionTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.dimList {
+  margin-top: $spacing-md;
+}
+
+.dimItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-md 0;
+
+  &:not(:last-child) {
+    border-bottom: 1rpx solid $color-divider;
+  }
+}
+
+.dimLeft {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+}
+
+.dimIcon {
+  font-size: $font-size-xl;
+}
+
+.dimName {
+  font-size: $font-size-md;
+  color: $color-text-primary;
+  font-weight: $font-weight-medium;
+}
+
+.dimHint {
+  display: block;
+  margin-top: 2rpx;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.commentSection {
+  padding: $spacing-lg;
+  margin-bottom: $spacing-lg;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 200rpx;
+  margin-top: $spacing-md;
+  padding: $spacing-md;
+  box-sizing: border-box;
+  background: $color-bg-page;
+  border-radius: $radius-md;
+  font-size: $font-size-md;
+  color: $color-text-primary;
+}
+
+.charCount {
+  display: block;
+  margin-top: $spacing-xs;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  text-align: right;
+}
+
+.submitBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: $button-height-lg;
+  background: linear-gradient(135deg, $color-primary-light 0%, $color-primary 100%);
+  border-radius: $radius-button;
+  box-shadow: 0 4rpx 16rpx rgba(255, 107, 74, 0.3);
+
+  &:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+
+  &.disabled {
+    opacity: 0.5;
+  }
+}
+
+.submitText {
+  font-size: $font-size-lg;
+  color: $color-text-white;
+  font-weight: $font-weight-semibold;
+}

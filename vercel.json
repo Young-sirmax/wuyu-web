@@ -1,0 +1,18 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "env": {
+    "DATABASE_URL": "postgresql://eazo-pczqb2bh:2qU4k8OD9mKRXGp0aYnjjry5@managed-database-4.eazo.ai:5432/wuyu-rgjtkyeh"
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "frame-ancestors https: http:"
+        }
+      ]
+    }
+  ]
+}

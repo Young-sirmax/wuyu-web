@@ -1,0 +1,15 @@
+node_modules
+.next
+.vercel
+mini-program
+*.log
+*.ps1
+*.bat
+*.cjs
+Dockerfile
+build-bg.ps1
+README.md
+AGENTS.md
+.env
+.env.*
+!.env.example

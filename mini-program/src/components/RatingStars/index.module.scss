@@ -1,0 +1,42 @@
+@use '@/styles/variables.scss' as *;
+
+.wrap {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+}
+
+.starsStatic {
+  display: flex;
+  align-items: center;
+}
+
+.starBox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star {
+  line-height: 1;
+  &.empty { color: $color-border; }
+  &.active { color: $color-credit; }
+}
+
+.starFill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.value {
+  font-size: $font-size-sm;
+  color: $color-credit;
+  font-weight: $font-weight-semibold;
+}
